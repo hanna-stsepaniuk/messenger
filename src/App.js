@@ -1,4 +1,5 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
@@ -6,6 +7,7 @@ import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 
 import MessengerView from './messenger/MessengerView';
+import store from './store';
 
 const useStyles = makeStyles(theme => ({
   header: {
@@ -17,6 +19,7 @@ function App() {
   const classes = useStyles();
 
   return (
+    <Provider store={store}>
     <Container maxWidth="lg">
       <Paper>
         <header className={classes.header}>
@@ -25,6 +28,7 @@ function App() {
         <MessengerView />
       </Paper>
     </Container>
+    </Provider>
   );
 }
 

@@ -1,4 +1,4 @@
-export const getFriends = () => Promise.resolve([
+export const loadFriends = () => Promise.resolve([
     {
         id: 1,
         name: "Alice"
