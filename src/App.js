@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
+import Paper from '@material-ui/core/Paper';
+import { makeStyles } from '@material-ui/core/styles';
+
+import MessengerView from './messenger/MessengerView';
+
+const useStyles = makeStyles(theme => ({
+  header: {
+    padding: theme.spacing(1),
+  }
+}));
 
 function App() {
+  const classes = useStyles();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth="lg">
+      <Paper>
+        <header className={classes.header}>
+          <Typography variant="h5" component="h1" >Brand New Messenger</Typography>
+        </header>
+        <MessengerView />
+      </Paper>
+    </Container>
   );
 }
 
