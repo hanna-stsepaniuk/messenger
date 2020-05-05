@@ -3,7 +3,6 @@ import { Provider } from 'react-redux';
 
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 
 import MessengerView from './messenger/MessengerView';
@@ -11,7 +10,8 @@ import store from './store';
 
 const useStyles = makeStyles(theme => ({
   header: {
-    padding: theme.spacing(1),
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
   }
 }));
 
@@ -20,14 +20,12 @@ function App() {
 
   return (
     <Provider store={store}>
-    <Container maxWidth="lg">
-      <Paper>
-        <header className={classes.header}>
-          <Typography variant="h5" component="h1" >Brand New Messenger</Typography>
-        </header>
-        <MessengerView />
-      </Paper>
-    </Container>
+      <Container maxWidth="lg">
+          <header className={classes.header}>
+            <Typography variant="h5" component="h1">Brand New Messenger</Typography>
+          </header>
+          <MessengerView />
+      </Container>
     </Provider>
   );
 }

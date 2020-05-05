@@ -1,3 +1,3 @@
-export const getMessages = (friendId) => Promise.resolve([]);
+export const loadMessages = (friendId) => Promise.resolve([]);
 
-export const sendMessage = message => Promise.resolve();
+export const sendMessage = (friendId, message) => Promise.resolve();

@@ -18,7 +18,7 @@ const FriendsListContainer = () => {
         loadFriends().then(friends => dispatch(setFriendsAction(friends)));
     }, [dispatch]);
 
-    return (<FriendsList
+    return (<FriendsList 
         friends={friendsList}
         selectFriendHandler={selectFriendHandler}
         selectedFriendId={selectedFriendId}
