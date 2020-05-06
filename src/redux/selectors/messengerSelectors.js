@@ -1,5 +1,6 @@
-export const getFriends = state => state.messenger.friends;
+export const getFriends = (state) => state.messenger.friends;
 
-export const getMesseges = friendId => state => state.messenger.messages[friendId] || [];
+export const getMessages = (friendId) => (state) =>
+  state.messenger.messages[friendId] || [];
 
-export const getSelectedFriendId = state => state.messenger.selectedFriend;
+export const getSelectedFriendId = (state) => state.messenger.selectedFriend;
